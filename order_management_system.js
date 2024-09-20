@@ -8,3 +8,7 @@ const inventory = [
 ]; 
 // Array contains name, price, and quantity of products. 
 
+// Task 2: Create an Orders Array of Order Objects
+
+const orders = []; // Initiallizing array 
+
