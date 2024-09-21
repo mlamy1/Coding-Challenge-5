@@ -68,3 +68,22 @@ function completeOrder(customerName) {
       
 }};
 completeOrder('Deandre', [{name: 'Sugar', quantity: 1}, {name: 'Birthday Cake', quantity: 1}]); // Example order. 
+
+// Task 6: Create a Function to Check Pending Orders
+
+function checkPendingOrders() {
+    const pendingOrders = orders.filter(order => order.status === 'Pending');
+    if (pendingOrders.length === 0) { // if there are no pending orders, 
+        console.log('There are no pending orders!'); // message will display. 
+    } else {
+    console.log('Pending Orders:', pendingOrders); 
+}
+} 
+orders.push({customerName: 'Sara', items: [{name: 'Sugar', quantity: 9 }], status: 'Pending'}); // Sample order
+orders.push({customerName: 'Lily', items: [{name: 'Chocolate Chip', quantity: 3 }], status: 'Complete'}); // Sample order
+orders.push({customerName: 'Soph', items: [{name: 'Birthday Cake', quantity: 6 }], status: 'Pending'}); // Sample order
+orders.push({customerName: 'Diana', items: [{name: 'Double Chocolate Chip', quantity: 1 }], status: 'Complete'}); // Sample order
+
+
+let pendingorders = checkPendingOrders(); 
+console.log(pendingorders); // Display pending orders category.
