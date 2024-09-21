@@ -54,3 +54,17 @@ function calculateOrderTotal(order) {
 
 const total= calculateOrderTotal(orders[0]); // Used to define output of function.
 console.log(` Your total is: $${total}`); // Displays message. 
+
+// Task 5: Create a Function to Mark an Order as Completed
+
+function completeOrder(customerName) { 
+    const order = orders.find(order => order.customerName === customerName); // Use find code to search for name in orders. 
+        if (!order) { // If message is not found, 
+            console.log(`ERROR: ${customerName} order not found`); // Message will display.  
+        }
+        const sampleOrder = { // If message is found, data will update. 
+            custName: customerName,
+            status: 'Complete'
+      
+}};
+completeOrder('Deandre', [{name: 'Sugar', quantity: 1}, {name: 'Birthday Cake', quantity: 1}]); // Example order. 
