@@ -45,5 +45,12 @@ function placeOrder(customerName, orderedItems) {
     }
     placeOrder('Cameron', [{name: 'Sugar', quantity: 2}, {name: 'Birthday Cake', quantity: 4}]); // Example order. 
 
+// Task 4: Create a Function to Calculate Total for an Order
 
+function calculateOrderTotal(order) {
+    return order.items.reduce((sum, item) => { // Use reduce to go over arrary.
+        const product = inventory.find(product => product.name === item.name);
+        return sum + (product.price * item.quantity)}, 0)}; // function used to calculate total price of order. 
 
+const total= calculateOrderTotal(orders[0]); // Used to define output of function.
+console.log(` Your total is: $${total}`); // Displays message. 
